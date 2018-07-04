@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:x0="http://www.w3.org/2001/XMLSchema">
+    <comment>Let you write what you want here</comment>
+    <identity>
+        <hostid>myserver</hostid>
+        <cryptokey>test-key.des</cryptokey>
+        <authentfile>Gg-authent.xml</authentfile>
+    </identity>	
+    <server>
+        <uselocalexec>False</uselocalexec>
+        <serveradmin>monadmin</serveradmin>
+        <serverpasswd>467722536fcc88b3893eecb714f52fc6</serverpasswd>
+        <usehttpcomp>True</usehttpcomp>
+        <httpadmin>gatewayadmin</httpadmin>
+        <admkeypath>testsslnocert.jks</admkeypath>
+        <admkeystorepass>testsslnocert</admkeystorepass>
+        <admkeypass>testalias</admkeypass>
+        <snmpconfig>snmpconfig.xml</snmpconfig>
+    </server>
+    <network>
+        <portmin>10000</portmin>
+        <portmax>30000</portmax>
+        <serverhttpsport>8023</serverhttpsport>
+    </network>
+    <exec>
+        <storecmd>R66PREPARETRANSFER -to hosta -file #BASEPATH##FILE# -rule rule1 -info SendFile</storecmd>
+		<retrievecmd>R66PREPARETRANSFER -to hosta -file #FILE# -rule rule2 -info DownloadFile</retrievecmd>
+    </exec>
+    <directory>
+       
+    </directory>
+    <limit>
+        <deleteonabort>True</deleteonabort>
+        <sessionlimit>0</sessionlimit>
+        <globallimit>0</globallimit>
+        <delaylimit>10000</delaylimit>
+        <serverthread>4</serverthread>
+        <clientthread>40</clientthread>
+        <memorylimit>4000000000</memorylimit>
+        <usecpulimit>False</usecpulimit>
+        <usejdkcpulimit>False</usejdkcpulimit>
+        <cpulimit>0</cpulimit>
+        <connlimit>0</connlimit>
+        <timeoutcon>10000</timeoutcon>
+        <usenio>False</usenio>
+        <usefastmd5>True</usefastmd5>
+        <fastmd5>D:\NEWJARS\gglib\win32\MD5.dll</fastmd5>
+        <blocksize>65536</blocksize>
+    </limit>
+    <db>
+        
+    </db>
+</config>
