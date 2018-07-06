@@ -10,18 +10,14 @@ import java.util.Properties;
 
 import javax.servlet.ServletContextEvent;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.web.context.ContextLoaderListener;
 import org.waarp.gateway.ftp.ExecGatewayFtpServer;
 import org.waarp.gateway.ftp.ServerInitDatabase;
 
 public class AnchelGatewayServer extends ContextLoaderListener {
 
-	private static final Logger logger = LoggerFactory.getLogger(AnchelGatewayServer.class);
-
 	public void contextInitialized(ServletContextEvent arg0) {
-		logger.debug("Anchel gateway server is starting");
+		System.out.println("Anchel gateway server is starting");
 		File waarpFile = new File(this.getClass().getClassLoader().getResource("config-serverA.xml").getFile());
 		File gatewayFile = new File(this.getClass().getClassLoader().getResource("Gg-FTP.xml").getFile());
 		String waarppath = null;
@@ -41,13 +37,13 @@ public class AnchelGatewayServer extends ContextLoaderListener {
 		String mycondition1 = new String("create");
 		if (propcondition.equals(mycondition1)) {
 			String[] gatearray = { gatewayppath, "-initdb" };
-			logger.debug("Anchel gateway server, databse is initiating");
+			System.out.println("Anchel gateway server, databse is initiating");
 			ServerInitDatabase.initGatewayDB(gatearray);
-			logger.debug("Anchel gateway server databse is initiated");
+			System.out.println("Anchel gateway server databse is initiated");
 		}
-		logger.debug("Anchel gateway server is starting");
+		System.out.println("Anchel gateway server is starting");
 		ExecGatewayFtpServer.initGatewayServer(configFiles);
-		logger.debug("Anchel gateway server is started");
+		System.out.println("Anchel gateway server is started");
 	}
 
 	public void contextDestroyed(ServletContextEvent arg0) {
@@ -57,17 +53,17 @@ public class AnchelGatewayServer extends ContextLoaderListener {
 			Driver driver = drivers.nextElement();
 			if (driver.getClass().getClassLoader() == cl) {
 				try {
-					logger.info("Deregistering JDBC driver {}", driver);
+					System.out.println("Deregistering JDBC driver {}" + driver);
 					DriverManager.deregisterDriver(driver);
 				} catch (SQLException e) {
 					e.printStackTrace();
-					logger.error("Error deregistering JDBC driver {}", driver, e);
+					System.out.println("Error deregistering JDBC driver {}" + driver + e);
 				}
 			} else {
-				logger.trace("Not deregistering JDBC driver {} as it does not belong to this webapp's ClassLoader",
-						driver);
+				System.out.println(
+						"Not deregistering JDBC driver {} as it does not belong to this webapp's ClassLoader" + driver);
 			}
 		}
-		logger.debug("Anchel gateway server terminated");
+		System.out.println("Anchel gateway server terminated");
 	}
 }
