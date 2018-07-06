@@ -22,6 +22,27 @@
   	</repository>
   </repositories>
 	<dependencies>
+		<dependencies>
+		<dependency>
+    	<groupId>ch.qos.logback</groupId>
+    	<artifactId>logback-classic</artifactId>
+    	<version>1.1.8</version>
+    </dependency>
+	<dependency>
+    	<groupId>ch.qos.logback</groupId>
+    	<artifactId>logback-core</artifactId>
+    	<version>1.1.8</version>
+    </dependency>
+	 <dependency>
+        <groupId>org.slf4j</groupId>
+         <artifactId>slf4j-api</artifactId>
+          <version>1.7.22</version>
+    </dependency>
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-simple</artifactId>
+		<version>1.7.7</version>
+	</dependency>
 		<dependency>
 			<groupId>Waarp</groupId>
 			<artifactId>WaarpR66</artifactId>
@@ -119,26 +140,6 @@
 		<scope>system</scope>
 		<systemPath>${TRAVIS_BUILD_DIR}/src/main/webapp/WEB-INF/lib/WaarpSnmp-3.0.3.jar</systemPath>
     </dependency>
-    <dependency>
-    	<groupId>ch.qos.logback</groupId>
-    	<artifactId>logback-classic</artifactId>
-    	<version>1.1.8</version>
-    </dependency>
-	 <dependency>
-        <groupId>org.slf4j</groupId>
-         <artifactId>slf4j-api</artifactId>
-          <version>1.6.6</version>
-    </dependency>
-    <dependency>
-    	<groupId>ch.qos.logback</groupId>
-    	<artifactId>logback-core</artifactId>
-    	<version>1.1.8</version>
-    </dependency>
-	<dependency>
-		<groupId>org.slf4j</groupId>
-		<artifactId>slf4j-simple</artifactId>
-		<version>1.7.7</version>
-	</dependency>
 	<dependency>
 		<groupId>commons-logging</groupId>
 		<artifactId>commons-logging</artifactId>
