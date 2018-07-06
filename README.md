@@ -1,9 +1,9 @@
-AnchelR66Server WebApplication
+AnchelGatewayServer WebApplication
 =============
 
 You will find in this web site the sub project R66Server.
 
-AnchelR66Server is a project mainly it contains Anchel_WaarpR66 by this we can initiate WaarpR66 database,
+AnchelGatewayServer is a project mainly it contains Anchel_WaarpGateway by this we can initiate WaarpGateway database,
 as well as can start server.
 
 It provides, among other packages, an open source massive file transfer monitor 
