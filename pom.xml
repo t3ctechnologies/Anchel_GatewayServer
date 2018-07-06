@@ -22,7 +22,6 @@
   	</repository>
   </repositories>
 	<dependencies>
-		<dependencies>
 		<dependency>
     	<groupId>ch.qos.logback</groupId>
     	<artifactId>logback-classic</artifactId>
