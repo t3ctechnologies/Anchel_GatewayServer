@@ -28,19 +28,19 @@
 		<version>1.7.7</version>
 	</dependency>
 		<dependency>
-			<groupId>Waarp</groupId>
-			<artifactId>WaarpR66</artifactId>
+			<groupId>Anchel</groupId>
+			<artifactId>Anchel-R66</artifactId>
 			<version>3.0.8</version>
 			<!-- below 2 lines are added for TRAVIS purpose -->
 			<scope>system</scope>
-			<systemPath>${TRAVIS_BUILD_DIR}/src/main/webapp/WEB-INF/lib/WaarpR66-3.0.8.jar</systemPath>
+			<systemPath>${TRAVIS_BUILD_DIR}/src/main/webapp/WEB-INF/lib/Anchel-R66-3.0.8.jar</systemPath>
 		</dependency>
 		<dependency>
-			<groupId>Waarp</groupId>
-			<artifactId>WaarpGatewayFtp</artifactId>
+			<groupId>Anchel</groupId>
+			<artifactId>Anchel-GatewayFtp</artifactId>
 			<version>3.0.6</version>
 			<scope>system</scope>
-			<systemPath>${TRAVIS_BUILD_DIR}/src/main/webapp/WEB-INF/lib/WaarpGatewayFtp-3.0.6.jar</systemPath>
+			<systemPath>${TRAVIS_BUILD_DIR}/src/main/webapp/WEB-INF/lib/Anchel-GatewayFtp-3.0.6.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>

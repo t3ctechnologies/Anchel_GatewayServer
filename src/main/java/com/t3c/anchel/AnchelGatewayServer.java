@@ -11,8 +11,9 @@ import java.util.Properties;
 import javax.servlet.ServletContextEvent;
 
 import org.springframework.web.context.ContextLoaderListener;
-import org.waarp.gateway.ftp.ExecGatewayFtpServer;
-import org.waarp.gateway.ftp.ServerInitDatabase;
+
+import com.t3c.anchel.gateway.ftp.ExecGatewayFtpServer;
+import com.t3c.anchel.gateway.ftp.ServerInitDatabase;
 
 public class AnchelGatewayServer extends ContextLoaderListener {
 
